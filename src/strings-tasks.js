@@ -478,7 +478,7 @@ function extractEmails(str) {
  *
  */
 function encodeToRot13(str) {
-  return str.replace(/[a-z]/gi, function (char) {
+  return str.replace(/[a-z]/gi, (char) => {
     const code = char.charCodeAt(0);
     const shift = code >= 97 ? 97 : 65;
     return String.fromCharCode(((code - shift + 13) % 26) + shift);
